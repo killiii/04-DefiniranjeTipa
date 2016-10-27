@@ -14,6 +14,7 @@ namespace Vsite.CSharp
 
             IzvedenoGnijezdo ig = new IzvedenoGnijezdo();
             ig.PredstaviSe();
+            IzravnoKorištenjeUgnježđeneKlase();
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
@@ -22,8 +23,8 @@ namespace Vsite.CSharp
         public static void IzravnoKorištenjeUgnježđeneKlase()
         {
             // TODO: Modificirati definicije tako da se klasa Ugnježđena može pozivati izravno:
-            //Gnijezdo.Ugnježđena gu = new Gnijezdo.Ugnježđena();
-            //gu.PredstaviSeNeposredno();
+            Gnijezdo.Ugnježđena gu = new Gnijezdo.Ugnježđena();
+            gu.PredstaviSeNeposredno();
         }
     }
 }
