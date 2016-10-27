@@ -4,26 +4,27 @@ namespace Vsite.CSharp
 {
     class MojaKlasa
     {
-        // TODO: Dodati privatno polje (podatkovni član) "broj" tipa int i dodijeliti mu vrijednost 5
+        int broj = 5;
 
-
-        // TODO: U metodu IspišiČlan dodati naredbu koja će ispisati podatkovni član "broj".
         public void IspišiČlan()
         {
-
+            Console.WriteLine(broj);
         }
     }
 
 
     struct MojaStruktura
     {
-        // TODO: Dodati privatno polje (podatkovni član) "tekst" tipa string i dodijeliti mu vrijednost "MojaStruktura"
-
-
-        // TODO: U metodu IspišiČlan dodati naredbu koja će ispisati podatkovni član "tekst".
+        
+        private string tekst;// = "MojaStruktura";
+        public MojaStruktura(string tekst)
+        {
+            this.tekst = "MojaStruktura";
+        }
+       
         public void IspišiČlan()
         {
-
+            Console.WriteLine(tekst);
         }
     }
 
@@ -32,14 +33,18 @@ namespace Vsite.CSharp
     {
         public static void IspišiČlanKlase()
         {
-            // TODO: Inicijalizirati objekt tipa MojaKlasa i pozvati njegovu metodu IspišiČlan
-
+            MojaKlasa mk = new MojaKlasa();
+            mk.IspišiČlan();
         }
 
         public static void IspišiČlanStrukture()
         {
-            // TODO: Inicijalizirati objekt tipa MojaStruktura i pozvati njegovu metodu IspišiČlan koja treba ispisati "MojaStruktura".
+            
+            MojaStruktura ms = new MojaStruktura("MojaStruktura");
+            ms.IspišiČlan();
 
+            MojaStruktura ms2 = new MojaStruktura("MojaStruktura");
+            ms2.IspišiČlan();
         }
 
         static void Main(string[] args)
