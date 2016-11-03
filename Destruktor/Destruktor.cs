@@ -15,8 +15,11 @@ namespace Vsite.CSharp
             Debug.WriteLine(poruka);
         }
 
-        // TODO: Dodati destruktor (tj. finalizirajuću metodu) i njemu napisati naredbe koje će u konzolu i u Output prozor ispisati: "Destruktor objekta br. {RedniBroj}."
-
+        
+        ~KlasaSDestruktorom() {
+            Console.WriteLine($"Destruktor objekta br. {RedniBroj}.");
+            Debug.WriteLine($"Destruktor objekta br. {RedniBroj}.");
+        }
 
         public readonly int RedniBroj; // redni broj objekta
 
@@ -32,7 +35,7 @@ namespace Vsite.CSharp
                 KlasaSDestruktorom ksd = new KlasaSDestruktorom();
             }
 
-            // TODO: Dodati for petlju koja će se ponoviti 100000 puta i unutar koje će se kreirati novi objekti tipa KlasaSDestruktorom. Pokrenuti program i provjeriti redni broj prvog uništenog objekta.
+           
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();

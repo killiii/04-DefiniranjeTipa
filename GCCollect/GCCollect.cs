@@ -9,10 +9,24 @@ namespace Vsite.CSharp
         // TODO: Staviti točku prekida (breakpoint) u destruktor, pokrenuti program i pogledati zadnje ispise prije prekida izvođenja.
         public class KlasaSDestruktorom
         {
+            public KlasaSDestruktorom()
+            {
+                RedniBroj = ++Brojač;
+                string poruka = string.Format("Konstruktor objekta br. {0}", RedniBroj);
+                // ispis u konzolu
+                Console.WriteLine(poruka);
+                // dijagnostički ispis u Output prozor Visual Studija
+                Debug.WriteLine(poruka);
+            }
 
-        }
 
-        static void Main(string[] args)
+            ~KlasaSDestruktorom()
+            {
+                Console.WriteLine($"Destruktor objekta br. {RedniBroj}.");
+                Debug.WriteLine($"Destruktor objekta br. {RedniBroj}.");
+            }
+
+            static void Main(string[] args)
         {
             Console.WriteLine("Ušao sam u 'Main'");
 
