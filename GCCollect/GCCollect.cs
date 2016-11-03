@@ -18,14 +18,16 @@ namespace Vsite.CSharp
                 // dijagnostički ispis u Output prozor Visual Studija
                 Debug.WriteLine(poruka);
             }
+            public readonly int RedniBroj;
 
+            static int Brojač = 0;
 
             ~KlasaSDestruktorom()
             {
                 Console.WriteLine($"Destruktor objekta br. {RedniBroj}.");
                 Debug.WriteLine($"Destruktor objekta br. {RedniBroj}.");
             }
-
+        }
             static void Main(string[] args)
         {
             Console.WriteLine("Ušao sam u 'Main'");
